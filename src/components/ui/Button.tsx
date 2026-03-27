@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import type { ReactNode } from 'react';
+import type { MouseEventHandler, ReactNode } from 'react';
 
 import { cn } from '@/lib/utils/cn';
 
@@ -10,6 +10,7 @@ type ButtonProps = {
     href: string;
     variant?: ButtonVariant;
     className?: string;
+    onClick?: MouseEventHandler<HTMLAnchorElement>;
 };
 
 const variantClasses: Record<ButtonVariant, string> = {
@@ -17,10 +18,11 @@ const variantClasses: Record<ButtonVariant, string> = {
     secondary: 'border border-[hsl(var(--border))] bg-transparent text-[hsl(var(--foreground))] hover:bg-[hsl(var(--surface))]',
 };
 
-export function Button({ children, href, variant = 'primary', className }: ButtonProps) {
+export function Button({ children, href, variant = 'primary', className, onClick }: ButtonProps) {
     return (
         <Link
             href={href}
+            onClick={onClick}
             className={cn(
                 'inline-flex min-h-12 items-center justify-center rounded-full px-6 py-3 text-sm font-medium tracking-[0.01em] transition duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--ring))] focus-visible:ring-offset-2',
                 variantClasses[variant],
