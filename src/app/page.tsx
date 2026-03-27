@@ -1,26 +1,27 @@
-import { getLandingPageContent } from '@/application/landing/getLandingPageContent';
+import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';
 import { Section } from '@/components/ui/Section';
 
 export default function HomePage() {
-    const content = getLandingPageContent();
-
     return (
         <main>
             <Section>
                 <Container>
-                    <Heading eyebrow={content.hero.eyebrow} title={content.hero.title} description={content.hero.description} />
+                    <Badge>Accompagnement thérapeutique</Badge>
 
-                    <div className="mt-8 flex flex-wrap gap-4">
-                        <Button href={content.hero.primaryCta.href}>{content.hero.primaryCta.label}</Button>
+                    <Heading
+                        className="mt-8"
+                        title="Retrouver un espace pour vous"
+                        description="Un accompagnement doux et humain pour les femmes en période de surcharge émotionnelle."
+                    />
 
-                        {content.hero.secondaryCta ? (
-                            <Button href={content.hero.secondaryCta.href} variant="secondary">
-                                {content.hero.secondaryCta.label}
-                            </Button>
-                        ) : null}
+                    <div className="mt-10 flex flex-wrap gap-4">
+                        <Button href="#contact">Prendre contact</Button>
+                        <Button href="#about" variant="secondary">
+                            En savoir plus
+                        </Button>
                     </div>
                 </Container>
             </Section>

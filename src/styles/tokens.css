@@ -1,19 +1,25 @@
 :root {
-    --background: 34 33% 95%;
-    --surface: 32 29% 91%;
-    --foreground: 22 17% 20%;
-    --muted-foreground: 24 9% 45%;
+    --background: 35 35% 96%;
+    --surface: 32 30% 92%;
+    --surface-strong: 30 24% 88%;
 
-    --primary: 18 47% 70%;
+    --foreground: 20 18% 18%;
+    --muted-foreground: 24 10% 34%;
+
+    --primary: 16 42% 42%;
     --primary-foreground: 0 0% 100%;
 
-    --border: 30 18% 85%;
-    --ring: 18 47% 70%;
+    --secondary: 95 16% 64%;
+    --secondary-foreground: 20 18% 18%;
+
+    --border: 28 18% 80%;
+    --ring: 16 42% 42%;
 
     --radius-sm: 0.75rem;
     --radius-md: 1rem;
     --radius-lg: 1.5rem;
     --radius-xl: 2rem;
 
-    --shadow-soft: 0 20px 40px rgba(58, 47, 42, 0.08);
+    --shadow-soft: 0 18px 40px rgba(71, 57, 47, 0.08);
+    --shadow-card: 0 12px 30px rgba(71, 57, 47, 0.06);
 }
