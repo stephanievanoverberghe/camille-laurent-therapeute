@@ -12,6 +12,7 @@ body {
   color: hsl(var(--foreground));
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  font-family: var(--font-body);
 }
 
 * {

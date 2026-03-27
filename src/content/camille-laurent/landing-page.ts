@@ -14,6 +14,27 @@ export const landingPageContent: LandingPageContent = {
             label: 'En savoir plus',
             href: '#accompagnement',
         },
+        trustItems: [
+            {
+                id: 'approach',
+                label: 'Approche',
+                value: 'Douce et profondément humaine',
+            },
+            {
+                id: 'format',
+                label: 'Format',
+                value: 'Accompagnement individuel en visio',
+            },
+            {
+                id: 'goal',
+                label: 'Objectif',
+                value: 'Retrouver plus de clarté et d’apaisement',
+            },
+        ],
+        image: {
+            src: '/images/hero.png',
+            alt: 'Portrait doux et rassurant de Camille Laurent dans une lumière naturelle',
+        },
     },
 
     problem: {
@@ -90,5 +111,40 @@ export const landingPageContent: LandingPageContent = {
             label: 'Me contacter',
             href: '#contact',
         },
+    },
+    contact: {
+        eyebrow: 'Contact',
+        title: 'Prendre un premier temps d’échange',
+        description: 'Vous pouvez simplement décrire ce que vous traversez ou ce dont vous auriez besoin. Je vous répondrai avec douceur et clarté.',
+        submitLabel: 'Envoyer ma demande',
+        reassurance:
+            'Les informations transmises via ce formulaire sont utilisées uniquement pour répondre à votre demande. Vous pouvez exercer vos droits en écrivant à [adresse e-mail].',
+        fields: [
+            {
+                id: 'first-name',
+                label: 'Prénom',
+                name: 'firstName',
+                type: 'text',
+                placeholder: 'Votre prénom',
+                required: true,
+            },
+            {
+                id: 'email',
+                label: 'E-mail',
+                name: 'email',
+                type: 'email',
+                placeholder: 'votre@email.com',
+                required: true,
+            },
+            {
+                id: 'message',
+                label: 'Message',
+                name: 'message',
+                type: 'textarea',
+                placeholder: 'Décrivez simplement ce que vous traversez ou votre besoin…',
+                required: true,
+                rows: 6,
+            },
+        ],
     },
 };

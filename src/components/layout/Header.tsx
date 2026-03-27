@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
+import { TextLink } from '@/components/ui/TextLink';
 import { cn } from '@/lib/utils/cn';
 
 const navigation = [
@@ -42,13 +43,9 @@ export function Header() {
 
                     <nav className="hidden items-center gap-8 md:flex" aria-label="Navigation principale">
                         {navigation.map((item) => (
-                            <Link
-                                key={item.href}
-                                href={item.href}
-                                className="text-sm text-[hsl(var(--muted-foreground))] transition-colors duration-300 hover:text-[hsl(var(--foreground))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--ring))] focus-visible:ring-offset-2"
-                            >
+                            <TextLink key={item.href} href={item.href}>
                                 {item.label}
-                            </Link>
+                            </TextLink>
                         ))}
                     </nav>
 
@@ -86,7 +83,7 @@ export function Header() {
                         </nav>
 
                         <div className="mt-4">
-                            <Button href="#contact" className="w-full" onClick={undefined}>
+                            <Button href="#contact" className="w-full" onClick={closeMenu}>
                                 Prendre contact
                             </Button>
                         </div>

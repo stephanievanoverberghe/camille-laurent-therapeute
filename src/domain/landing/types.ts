@@ -3,12 +3,25 @@ export type Cta = {
     href: string;
 };
 
+export type HeroTrustItem = {
+    id: string;
+    label: string;
+    value: string;
+};
+
+export type HeroImage = {
+    src: string;
+    alt: string;
+};
+
 export type HeroContent = {
     eyebrow: string;
     title: string;
     description: string;
     primaryCta: Cta;
     secondaryCta?: Cta;
+    trustItems: HeroTrustItem[];
+    image: HeroImage;
 };
 
 export type TextSectionContent = {
@@ -43,6 +56,25 @@ export type FinalCtaContent = {
     cta: Cta;
 };
 
+export type ContactField = {
+    id: string;
+    label: string;
+    name: string;
+    type: 'text' | 'email' | 'textarea';
+    placeholder: string;
+    required?: boolean;
+    rows?: number;
+};
+
+export type ContactContent = {
+    eyebrow: string;
+    title: string;
+    description: string;
+    submitLabel: string;
+    reassurance: string;
+    fields: ContactField[];
+};
+
 export type LandingPageContent = {
     hero: HeroContent;
     problem: TextSectionContent;
@@ -52,4 +84,5 @@ export type LandingPageContent = {
     about: AboutContent;
     process: ProcessContent;
     finalCta: FinalCtaContent;
+    contact: ContactContent;
 };
