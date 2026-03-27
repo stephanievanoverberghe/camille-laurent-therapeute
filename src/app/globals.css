@@ -1,0 +1,11 @@
+@import '../styles/tokens.css';
+
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
